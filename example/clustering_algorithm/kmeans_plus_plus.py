@@ -121,7 +121,7 @@ def kmeans(points, nclusters):
         print("iteration...")
         # group element for centroids are used as counters
         for cc in cluster_centers:
-            cc.vector = [0, 0]
+            cc.vector = np.array([0.0, 0.0])
             cc.group = 0
 
         for p in points:
@@ -151,6 +151,7 @@ def kmeans(points, nclusters):
 
 if __name__ == '__main__':
     points = generate_points(500)
+
     points, cluster_centers = kmeans(points, 5)
 
     # for p in points:
@@ -170,8 +171,6 @@ if __name__ == '__main__':
         x.append(px_list)
         y.append(py_list)
 
-    print(len(x), len(y))
-    print(x[0][0])
     color_list = ['red', 'blue', 'green', 'gray', 'orange', 'purple']
     for i, coord in enumerate(zip(x, y)):
         # refer to @Suranyi, [https://www.zhihu.com/question/37146648/answer/299029958]
@@ -179,3 +178,5 @@ if __name__ == '__main__':
         plt.legend()
 
     plt.show()
+
+
