@@ -1,0 +1,10 @@
+.DS_Store
+*.pyc
+*.out
+*.o
+
+*.class
+*.classpath
+*.settings
+.project
+.metadata
